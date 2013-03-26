@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>Simple blog</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
-		<h1>Simple blog</h1>
-	</header>
-
-<%= yield %>
-
+  <div class="wrapper">
+    <div id="header">
+      <h1><a href="/">Simple blog</a></h1>
+    </div><!-- header -->
+    <div class="container">
+      <%= yield %>
+    </div><!-- container -->
+  </div><!-- wrapper -->
 </body>
 </html>

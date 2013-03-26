@@ -1,3 +1,18 @@
-<% @articles.each do |article| %>
-  <p><%=link_to article.title, article_path(article.id) %></p>
-<% end %>
+<div class="articles">
+  <% @articles.each do |article| %>
+  	<div class="article">
+      <h2><%=link_to article.title+article.created_at.strftime(" (%d/%m/%Y)"), article_path(article.id) %></h2>
+    </div>
+  <% end %>
+</div>
+
+<div id="info">
+  <h2><b>Ivan Puchkov</b></h2>
+  <img src="http://www.gravatar.com/avatar/2ff1a70585337eed0911fb98ffddf3cb.png" alt=photo>
+  <p>Russia, Tomsk</p2>
+  <ul>
+    <li><a href="mailto:rake.eclipse@gmail.com">Gmail</a></li>
+    <li><a href="https://github.com/ipuchkov">GitHub</a></li>
+    <li><a href="https://twitter.com/ipuchkov">Twitter</a></li>
+  </ul>
+</div>

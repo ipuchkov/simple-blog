@@ -1,0 +1,34 @@
+html, body {
+  font-size: 14px;
+  font-family: $verdana;
+  background-color: #FFF;
+  color: #123B7D;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+#header {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  @include linear-gradient(#499bea, #303C7B);
+  @include box-shadow(0 0 6px 3px #000);
+
+  h1 {
+    text-align: center;
+    a {
+      color: #FFF; 
+      text-decoration: none; 
+    }
+  }
+}
+
+a {
+  color: #2D6DD2;
+}

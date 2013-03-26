@@ -1,11 +1,15 @@
-<%= form_for([@article, @article.comments.build]) do |f| %>
-  <div class="field">
-    <%= f.label :author %><br />
+<%= form_for([@article, @article.comments.build], :html => { :class => 'comment_form'}) do |f| %>
+  <div class="author_field">
+    <%= f.label :name  %><br />
     <%= f.text_field :author %>
   </div>
-  <div class="field">
+  <div class="email_field">
+    <%= f.label :email %><br />
+    <%= f.text_field :author_email %>
+  </div>
+  <div class="comment_field">
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :style => "width: 100%; height: 100px;" %>
   </div>
   <div class="actions">
     <%= f.submit %>

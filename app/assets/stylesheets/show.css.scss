@@ -1,0 +1,16 @@
+.article_body {
+  border: 1px solid #D1D1D1;
+  background-color: #D1D1D1;
+  margin: 10px 0;
+  padding-left: 10px;
+  @include border-top-radius( 6px );
+  @include border-bottom-radius( 6px );
+}
+.comment {
+  margin: 10px 0;
+  border: 1px solid #E5E5E5;
+  padding-left: 10px;
+  background-color: #E5E5E5;
+  @include border-top-radius( 6px );
+  @include border-bottom-radius( 6px );
+}

@@ -1,9 +1,14 @@
-<h2><%= @article.title %></h2>
-  <p><%= @article.created_at %></p>
-  <p><%= @article.body %></p>
-
-<h2>Comments</h2>
-  <%= render @article.comments %>
-
+<div class="article_post">
+  <h2><%= @article.title %></h2>
+  <p><%= @article.created_at.strftime("%d-%m-%Y %H:%M") %></p>
+  <div class="article_body">
+    <p><%= @article.body %></p>
+  </div>
+</div>
+<div class="comments">
+  <h2>Comments:</h2>
+  
+    <%= render @article.comments %>
+</div>
 <h2>Add a comment:</h2>
 <%= render "comments/form" %>

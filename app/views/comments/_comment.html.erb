@@ -1,3 +1,4 @@
-<p><%= comment.author %></p>
-<p><%= comment.body %></p>
- 
+<div class="comment">
+  <p><b><%= comment.author %></b> <%= comment.created_at.strftime("%d-%m-%Y %H:%M") %></p>
+  <p><%= comment.body %></p>
+</div>
